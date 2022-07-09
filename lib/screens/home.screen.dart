@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_flutter_app/widgets/custom_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,10 +11,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: PreferredSize(
+        child: CustomAppBar(),
+        preferredSize: Size(screenSize.width, 50.0),
+      ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
+        backgroundColor: Colors.grey[850],
+        onPressed: () => {print('Cast')},
       ),
     );
   }
