@@ -16,8 +16,23 @@ class CustomAppBar extends StatelessWidget {
           children: [
             Image.asset(Assets.netflixLogo0),
             const SizedBox(width: 12.0),
-            Row(
-              children: [],
+            Expanded(
+              child: Row(
+                children: [
+                  _AppBarButton(
+                    title: 'TV Show',
+                    onTap: () => {print('TV Show')},
+                  ),
+                  _AppBarButton(
+                    title: 'Movies',
+                    onTap: () => {print('Movies')},
+                  ),
+                  _AppBarButton(
+                    title: 'My List',
+                    onTap: () => {print('My List')},
+                  ),
+                ],
+              ),
             )
           ],
         ),
@@ -31,8 +46,7 @@ class _AppBarButton extends StatelessWidget {
   final String title;
   final Function() onTap;
 
-  const _AppBarButton(Key key, {required this.title, required this.onTap})
-      : super(key: key);
+  const _AppBarButton({super.key, required this.title, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
