@@ -18,6 +18,7 @@ class CustomAppBar extends StatelessWidget {
             const SizedBox(width: 12.0),
             Expanded(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   _AppBarButton(
                     title: 'TV Show',
