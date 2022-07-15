@@ -1,10 +1,10 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:netflix_flutter_app/assets.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
+  const CustomAppBar({Key? key, this.scrollOffset = 0.0}) : super(key: key);
+
+  final double scrollOffset;
 
   @override
   Widget build(BuildContext context) {
